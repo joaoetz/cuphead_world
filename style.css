@@ -1,0 +1,415 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: auto;
+    padding: 0;
+    width: 80%;
+}
+
+header {
+    display: inline;
+    width: 100vw;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+}
+
+#space {
+    margin-top: 120px;
+}
+
+.top-bar {
+    background-color: #ffcf10;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: first base;
+    height: 20px;
+}
+
+#title-container {
+    background-color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+#title {
+    margin: 0;
+    font-size: 34px;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.logo {
+    width: auto;
+    height: auto;
+}
+
+nav {
+    background-color: #333;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 10px 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo para a seção intercalada */
+section#inicio {
+    padding: 50px 20px;
+}
+
+.content-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.text-left, .text-right {
+    width: 50%;
+    padding: 20px;
+}
+
+.media-left, .media-right {
+    width: 50%;
+    padding: 20px;
+}
+
+.text-left {
+    text-align: right;
+}
+
+.text-right {
+    text-align: left;
+}
+
+.media-left img, .media-right img {
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+    max-height: auto; 
+}
+.media-left video, .media-right video {
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+    max-height: auto; 
+}
+.content-block:nth-child(odd) .text-left {
+    order: 1;
+}
+
+.content-block:nth-child(odd) .media-right {
+    order: 2;
+}
+
+.content-block:nth-child(even) .media-left {
+    order: 1;
+}
+
+.content-block:nth-child(even) .text-right {
+    order: 2;
+}
+/* Seção Chefes */
+#chefes {
+    padding: 20px;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.world {
+    display: none;
+}
+
+#mundo1:checked ~ #mundo1-content,
+#mundo2:checked ~ #mundo2-content {
+    display: block;
+}
+
+h2 {
+    margin-top: 20px;
+}
+
+.chefe {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.imagem-chefe {
+    position: relative;
+    margin-right: 20px;
+}
+
+.imagem-chefe img {
+    width: 100px;
+    height: auto;
+    transition: opacity 0.3s ease;
+}
+
+.imagem-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: auto;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+
+.imagem-chefe:hover .imagem-principal {
+    opacity: 0;
+}
+
+.imagem-chefe:hover .imagem-hover {
+    opacity: 1;
+}
+
+label {
+    cursor: pointer;
+    margin-right: 20px;
+}
+/*Seção personagem*/
+#personagens {
+    padding: 20px;
+    text-align: center;
+}
+
+.personagem-card {
+    display: inline-block;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 300px;
+    padding: 20px;
+    margin: 20px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.personagem-card:hover {
+    transform: scale(1.05);
+}
+
+.personagem-card img {
+    width: 150px;
+    height: auto;
+}
+
+.personagem-card h2 {
+    margin-top: 10px;
+}
+
+.personagem-card p {
+    font-size: 14px;
+    margin-top: 10px;
+}
+/*Seção curiosidades*/
+#curiosidades {
+    padding: 20px;
+}
+
+.card {
+    background-color: #f9f9f9; 
+    border: 1px solid #ddd; 
+    border-radius: 5px;
+    padding: 20px; 
+    margin: 10px 0; 
+    transition: transform 0.2s; 
+}
+.card:hover {
+    transform: scale(1.05);
+}
+.card h3 {
+    margin-top: 0; 
+}
+
+.card p {
+    margin: 0;
+}
+/*Seção Ajuda*/
+#ajuda {
+    padding: 20px;
+}
+
+.ajuda-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ajuda-column {
+    flex: 1;
+    margin: 0 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.ajuda-column h2 {
+    margin-top: 0;
+}
+
+.ajuda-column ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.ajuda-column li {
+    margin: 10px 0;
+}
+
+.ajuda-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px 0;
+    transition: transform 0.2s;
+}
+
+.ajuda-card:hover {
+    transform: scale(1.05);
+}
+
+.ajuda-card h2 {
+    margin-top: 0;
+}
+
+.ajuda-card p {
+    margin: 5px 0;
+}
+
+/* Ajuste das seções */
+section {
+    padding: 100px 20px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+section h1 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+}
+
+footer p{
+    margin: auto;
+    padding: 8px;
+}
+
+/* Media query para iPhone 12 Pro */
+@media only screen and (max-width: 390px) {
+    body {
+        width: 100%;
+        padding: 10px;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .content-block {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .text-left, .text-right {
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+    }
+    
+    .media-left, .media-right {
+        width: 100%;
+        padding: 10px;
+    }
+    
+    .personagem-card {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .ajuda-column {
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .ajuda-container {
+        flex-direction: column;
+    }
+}
+
+/* Media query para iPad Pro */
+@media only screen and (max-width: 1024px) {
+    body {
+        width: 90%;
+    }
+    
+    .content-block {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .text-left, .text-right {
+        width: 100%;
+        text-align: center;
+        padding: 20px;
+    }
+    
+    .media-left, .media-right {
+        width: 100%;
+        padding: 20px;
+    }
+    
+    .personagem-card {
+        width: 45%;
+        margin: 10px auto;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ajuda-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ajuda-column {
+        width: 90%;
+        margin: 10px 0;
+    }
+}
